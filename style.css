@@ -1,0 +1,129 @@
+body {
+    font-family: 'Comic Neue', cursive; /* Utilisation de la police Comic Neue */
+    margin: 20px;
+    background-color: #f0f4f5; /* Couleur de fond par défaut */
+    background-image: url('background.jpg'); /* Remplacez 'background.jpg' par le nom de votre fichier image */
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir tout l'arrière-plan */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    color: black; /* Couleur du texte */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9); /* Fond semi-transparent pour le conteneur */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
+}
+
+h1 {
+    text-align: center;
+    color: black; /* Couleur principale */
+    font-weight: 700; /* Utilisation de la version en gras de la police */
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid black; /* Bordure de la barre de recherche */
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.manga-category {
+    margin-bottom: 40px;
+    text-align: center; /* Centre le texte dans la catégorie */
+}
+
+img {
+    width: 200px; /* Largeur de l'image */
+    height: 280px; /* Hauteur de l'image */
+    border-radius: 10px; /* Coins arrondis pour les images */
+}
+
+.manga-list {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne suivante */
+    gap: 20px; /* Espace entre les éléments */
+    justify-content: center; /* Centre les éléments dans le conteneur */
+}
+
+.manga-item {
+    width: calc(25% - 40px); /* 4 éléments par ligne avec un espace de 20px de chaque côté */
+    background-color: #eef4fa; /* Couleur de fond des éléments */
+    border-radius: 10px;
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Empêche le débordement de l'image */
+    padding: 15px; /* Ajoute un padding pour écarter le contenu des bords */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'effet d'agrandissement et d'ombre */
+}
+
+.manga-item a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Hérite de la couleur du texte parent */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.manga-item:hover {
+    transform: scale(1.05); /* Agrandit l'élément de 5% lors du survol */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre au survol */
+}
+
+.manga-item p {
+    margin-top: 10px; /* Espace entre l'image et le nom du manga */
+    text-align: center;
+    font-size: 1.2em; /* Ajuste la taille du texte */
+    color: #3a405a; /* Couleur du texte */
+}
+
+/* Ajout du style pour l'image en haut à gauche */
+.top-left-image {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: auto;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: black; /* Couleur principale */
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.pagination a.active {
+    background-color: black; /* Couleur principale */
+    color: white;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    background-color: #dce7f7; /* Couleur de survol */
+}

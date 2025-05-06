@@ -1,5 +1,5 @@
 <?php
-    include 'form.php';
+    include 'connexion/form.php';
 
     // Nombre de mangas à afficher par page
     $mangasPerPage = 12;

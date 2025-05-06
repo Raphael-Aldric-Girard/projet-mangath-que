@@ -1,5 +1,5 @@
 <?php
-require_once 'form.php';
+require_once 'connexion/form.php';
 
 // Récupérer l'ID du manga depuis l'URL
 $mangaId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
